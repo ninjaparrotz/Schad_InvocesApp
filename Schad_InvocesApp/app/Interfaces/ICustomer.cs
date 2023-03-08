@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Schad_InvocesApp.app
+namespace Schad_InvocesApp.app.Interfaces
 {
-    internal class InvoiceDetail
+    internal interface ICustomer: ICustomerType
     {
+
     }
 }

@@ -1,156 +1,79 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{19C4F8A3-5AA2-4220-8C22-D522009C0875}</ProjectGuid>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Schad_InvocesApp</RootNamespace>
-    <AssemblyName>Schad_InvocesApp</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="app\Customer.cs" />
-    <Compile Include="app\CustomerType.cs" />
-    <Compile Include="app\Invoice.cs" />
-    <Compile Include="app\InvoiceDetail.cs" />
-    <Compile Include="DbContext\Customer.cs">
+    <Compile Update="DbContext\Customer.cs">
       <DependentUpon>schad_db.tt</DependentUpon>
     </Compile>
-    <Compile Include="DbContext\CustomerType.cs">
+    <Compile Update="DbContext\CustomerType.cs">
       <DependentUpon>schad_db.tt</DependentUpon>
     </Compile>
-    <Compile Include="DbContext\Invoice.cs">
+    <Compile Update="DbContext\Invoice.cs">
       <DependentUpon>schad_db.tt</DependentUpon>
     </Compile>
-    <Compile Include="DbContext\InvoiceDetail.cs">
+    <Compile Update="DbContext\InvoiceDetail.cs">
       <DependentUpon>schad_db.tt</DependentUpon>
     </Compile>
-    <Compile Include="DbContext\schad_db.Context.cs">
+    <Compile Update="DbContext\schad_db.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>schad_db.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DbContext\schad_db.cs">
+    <Compile Update="DbContext\schad_db.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>schad_db.tt</DependentUpon>
     </Compile>
-    <Compile Include="DbContext\schad_db.Designer.cs">
-      <AutoGen>True</AutoGen>
+    <Compile Update="DbContext\schad_db.Designer.cs">
       <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
       <DependentUpon>schad_db.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="userControls\customerControl.cs">
+    <Compile Update="userControls\customerControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="userControls\customerControl.Designer.cs">
-      <DependentUpon>customerControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="userControls\CustymerTypeControl.cs">
+    <Compile Update="userControls\CustymerTypeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="userControls\CustymerTypeControl.Designer.cs">
-      <DependentUpon>CustymerTypeControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="userControls\InvoicesControl.cs">
+    <Compile Update="userControls\InvoicesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="userControls\InvoicesControl.Designer.cs">
-      <DependentUpon>InvoicesControl.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="userControls\customerControl.resx">
-      <DependentUpon>customerControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="userControls\CustymerTypeControl.resx">
-      <DependentUpon>CustymerTypeControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="userControls\InvoicesControl.resx">
-      <DependentUpon>InvoicesControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EntityDeploy Include="DbContext\schad_db.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>schad_db.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DbContext\schad_db.edmx.diagram">
+    <None Update="DbContext\schad_db.edmx.diagram">
       <DependentUpon>schad_db.edmx</DependentUpon>
     </None>
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
+    <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.410601">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="7.0.0" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Content Include="appsettings.json" />
     <Content Include="DbContext\schad_db.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>schad_db.Context.cs</LastGenOutput>
@@ -161,11 +84,14 @@
       <DependentUpon>schad_db.edmx</DependentUpon>
       <LastGenOutput>schad_db.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\pngwing.com1.png" />
-    <None Include="Resources\pngwing.com.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Remove="Properties\Resources.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sql_Script\" />
+  </ItemGroup>
 </Project>

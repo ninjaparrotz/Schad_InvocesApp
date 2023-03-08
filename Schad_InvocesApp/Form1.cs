@@ -41,5 +41,15 @@ namespace Schad_InvocesApp
             customerTypeControl1.BringToFront();
             lblModule.Text = "Tipo Cliente";
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void DashApp_Shown(object sender, EventArgs e)
+        {
+
+        }
     }
 }

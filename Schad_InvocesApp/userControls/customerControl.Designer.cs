@@ -28,215 +28,334 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.panelGrid = new System.Windows.Forms.Panel();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.dgvCustomers = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panelGrid.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            label2 = new System.Windows.Forms.Label();
+            panelGrid = new System.Windows.Forms.Panel();
+            btnDelete = new System.Windows.Forms.Button();
+            dgvCustomers = new System.Windows.Forms.DataGridView();
+            Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            CustomerType_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            txtCustomerName = new System.Windows.Forms.TextBox();
+            txtCustomerAddress = new System.Windows.Forms.TextBox();
+            label1 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            cmbCustomerType = new System.Windows.Forms.ComboBox();
+            schadInvocesEntitiesBindingSource1 = new System.Windows.Forms.BindingSource(components);
+            customerTypeBindingSource1 = new System.Windows.Forms.BindingSource(components);
+            schadInvocesEntitiesBindingSource = new System.Windows.Forms.BindingSource(components);
+            customerTypeBindingSource = new System.Windows.Forms.BindingSource(components);
+            chbCustomerActive = new System.Windows.Forms.CheckBox();
+            btnSave = new System.Windows.Forms.Button();
+            btnClear = new System.Windows.Forms.Button();
+            groupBox1 = new System.Windows.Forms.GroupBox();
+            lblAddressVal = new System.Windows.Forms.Label();
+            lblNameVal = new System.Windows.Forms.Label();
+            panelGrid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)schadInvocesEntitiesBindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)customerTypeBindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)schadInvocesEntitiesBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)customerTypeBindingSource).BeginInit();
+            groupBox1.SuspendLayout();
+            SuspendLayout();
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 47);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nombre:";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(14, 47);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(72, 20);
+            label2.TabIndex = 2;
+            label2.Text = "Nombre:";
             // 
             // panelGrid
             // 
-            this.panelGrid.Controls.Add(this.btnDelete);
-            this.panelGrid.Controls.Add(this.button4);
-            this.panelGrid.Controls.Add(this.dgvCustomers);
-            this.panelGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelGrid.Location = new System.Drawing.Point(0, 232);
-            this.panelGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panelGrid.Name = "panelGrid";
-            this.panelGrid.Size = new System.Drawing.Size(640, 275);
-            this.panelGrid.TabIndex = 3;
+            panelGrid.Controls.Add(btnDelete);
+            panelGrid.Controls.Add(dgvCustomers);
+            panelGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
+            panelGrid.Location = new System.Drawing.Point(0, 195);
+            panelGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            panelGrid.Name = "panelGrid";
+            panelGrid.Size = new System.Drawing.Size(733, 312);
+            panelGrid.TabIndex = 3;
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Tomato;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(546, 196);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 45);
-            this.btnDelete.TabIndex = 13;
-            this.btnDelete.Text = "Eliminar";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Goldenrod;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(451, 196);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 45);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Editar";
-            this.button4.UseVisualStyleBackColor = false;
+            btnDelete.BackColor = System.Drawing.Color.Tomato;
+            btnDelete.Enabled = false;
+            btnDelete.FlatAppearance.BorderSize = 0;
+            btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnDelete.ForeColor = System.Drawing.Color.White;
+            btnDelete.Location = new System.Drawing.Point(625, 241);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new System.Drawing.Size(75, 45);
+            btnDelete.TabIndex = 13;
+            btnDelete.Text = "Eliminar";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // dgvCustomers
             // 
-            this.dgvCustomers.BackgroundColor = System.Drawing.Color.White;
-            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomers.Location = new System.Drawing.Point(34, 3);
-            this.dgvCustomers.Name = "dgvCustomers";
-            this.dgvCustomers.Size = new System.Drawing.Size(588, 173);
-            this.dgvCustomers.TabIndex = 0;
+            dgvCustomers.AllowUserToAddRows = false;
+            dgvCustomers.AllowUserToDeleteRows = false;
+            dgvCustomers.AllowUserToResizeColumns = false;
+            dgvCustomers.AllowUserToResizeRows = false;
+            dgvCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dgvCustomers.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(0, 33, 68);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dgvCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { Id, Name, Address, CustomerType_Id, Status });
+            dgvCustomers.EnableHeadersVisualStyles = false;
+            dgvCustomers.Location = new System.Drawing.Point(36, 3);
+            dgvCustomers.Name = "dgvCustomers";
+            dgvCustomers.ReadOnly = true;
+            dgvCustomers.RowHeadersVisible = false;
+            dgvCustomers.RowHeadersWidth = 51;
+            dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dgvCustomers.Size = new System.Drawing.Size(664, 218);
+            dgvCustomers.TabIndex = 0;
+            dgvCustomers.CellDoubleClick += dgvCustomers_CellDoubleClick;
             // 
-            // textBox1
+            // Id
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(132, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(338, 26);
-            this.textBox1.TabIndex = 7;
+            Id.DataPropertyName = "Id";
+            Id.HeaderText = "Id";
+            Id.Name = "Id";
+            Id.ReadOnly = true;
+            Id.Visible = false;
             // 
-            // textBox2
+            // Name
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(132, 91);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(338, 26);
-            this.textBox2.TabIndex = 9;
+            Name.DataPropertyName = "Name";
+            Name.HeaderText = "Nombre";
+            Name.Name = "Name";
+            Name.ReadOnly = true;
+            // 
+            // Address
+            // 
+            Address.DataPropertyName = "Address";
+            Address.HeaderText = "Direccion";
+            Address.Name = "Address";
+            Address.ReadOnly = true;
+            // 
+            // CustomerType_Id
+            // 
+            CustomerType_Id.DataPropertyName = "Customer_Type";
+            CustomerType_Id.HeaderText = "Tipo Cliente";
+            CustomerType_Id.Name = "CustomerType_Id";
+            CustomerType_Id.ReadOnly = true;
+            // 
+            // Status
+            // 
+            Status.DataPropertyName = "Status";
+            Status.HeaderText = "Estado";
+            Status.Name = "Status";
+            Status.ReadOnly = true;
+            // 
+            // txtCustomerName
+            // 
+            txtCustomerName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            txtCustomerName.Location = new System.Drawing.Point(132, 47);
+            txtCustomerName.Name = "txtCustomerName";
+            txtCustomerName.Size = new System.Drawing.Size(399, 26);
+            txtCustomerName.TabIndex = 7;
+            // 
+            // txtCustomerAddress
+            // 
+            txtCustomerAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            txtCustomerAddress.Location = new System.Drawing.Point(132, 91);
+            txtCustomerAddress.Name = "txtCustomerAddress";
+            txtCustomerAddress.Size = new System.Drawing.Size(399, 26);
+            txtCustomerAddress.TabIndex = 9;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 91);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 20);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Dirección:";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(15, 91);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(84, 20);
+            label1.TabIndex = 8;
+            label1.Text = "Dirección:";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 133);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 20);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Tipo Cliente:";
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(14, 133);
+            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(97, 20);
+            label3.TabIndex = 10;
+            label3.Text = "Tipo Cliente:";
             // 
-            // comboBox1
+            // cmbCustomerType
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(132, 133);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(338, 28);
-            this.comboBox1.TabIndex = 1;
+            cmbCustomerType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cmbCustomerType.FormattingEnabled = true;
+            cmbCustomerType.Location = new System.Drawing.Point(132, 133);
+            cmbCustomerType.Name = "cmbCustomerType";
+            cmbCustomerType.Size = new System.Drawing.Size(225, 28);
+            cmbCustomerType.TabIndex = 1;
             // 
-            // checkBox1
+            // schadInvocesEntitiesBindingSource1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(393, 181);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(77, 24);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "Activo";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            schadInvocesEntitiesBindingSource1.DataSource = typeof(DbContext.schad_InvocesEntities);
+            // 
+            // customerTypeBindingSource1
+            // 
+            customerTypeBindingSource1.DataSource = typeof(DbContext.CustomerType);
+            // 
+            // schadInvocesEntitiesBindingSource
+            // 
+            schadInvocesEntitiesBindingSource.DataSource = typeof(DbContext.schad_InvocesEntities);
+            // 
+            // customerTypeBindingSource
+            // 
+            customerTypeBindingSource.DataSource = typeof(DbContext.CustomerType);
+            // 
+            // chbCustomerActive
+            // 
+            chbCustomerActive.AutoSize = true;
+            chbCustomerActive.Checked = true;
+            chbCustomerActive.CheckState = System.Windows.Forms.CheckState.Checked;
+            chbCustomerActive.Location = new System.Drawing.Point(454, 132);
+            chbCustomerActive.Name = "chbCustomerActive";
+            chbCustomerActive.Size = new System.Drawing.Size(77, 24);
+            chbCustomerActive.TabIndex = 12;
+            chbCustomerActive.Text = "Activo";
+            chbCustomerActive.UseVisualStyleBackColor = true;
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(535, 55);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(86, 45);
-            this.btnSave.TabIndex = 13;
-            this.btnSave.Text = "Guardar";
-            this.btnSave.UseVisualStyleBackColor = false;
+            btnSave.BackColor = System.Drawing.Color.MediumSeaGreen;
+            btnSave.FlatAppearance.BorderSize = 0;
+            btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnSave.ForeColor = System.Drawing.Color.White;
+            btnSave.Location = new System.Drawing.Point(614, 50);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new System.Drawing.Size(98, 45);
+            btnSave.TabIndex = 13;
+            btnSave.Text = "Guardar";
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
             // 
-            // button2
+            // btnClear
             // 
-            this.button2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(535, 108);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 45);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Limpiar";
-            this.button2.UseVisualStyleBackColor = false;
+            btnClear.BackColor = System.Drawing.Color.DodgerBlue;
+            btnClear.FlatAppearance.BorderSize = 0;
+            btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnClear.ForeColor = System.Drawing.Color.White;
+            btnClear.Location = new System.Drawing.Point(614, 111);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new System.Drawing.Size(98, 45);
+            btnClear.TabIndex = 13;
+            btnClear.Text = "Limpiar";
+            btnClear.UseVisualStyleBackColor = false;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(21, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(491, 221);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
+            groupBox1.Controls.Add(lblAddressVal);
+            groupBox1.Controls.Add(lblNameVal);
+            groupBox1.Controls.Add(txtCustomerAddress);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(txtCustomerName);
+            groupBox1.Controls.Add(chbCustomerActive);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(cmbCustomerType);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Location = new System.Drawing.Point(21, 3);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new System.Drawing.Size(558, 174);
+            groupBox1.TabIndex = 14;
+            groupBox1.TabStop = false;
+            // 
+            // lblAddressVal
+            // 
+            lblAddressVal.AutoSize = true;
+            lblAddressVal.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblAddressVal.ForeColor = System.Drawing.Color.Crimson;
+            lblAddressVal.Location = new System.Drawing.Point(532, 95);
+            lblAddressVal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblAddressVal.Name = "lblAddressVal";
+            lblAddressVal.Size = new System.Drawing.Size(19, 22);
+            lblAddressVal.TabIndex = 16;
+            lblAddressVal.Text = "*";
+            lblAddressVal.Visible = false;
+            // 
+            // lblNameVal
+            // 
+            lblNameVal.AutoSize = true;
+            lblNameVal.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblNameVal.ForeColor = System.Drawing.Color.Crimson;
+            lblNameVal.Location = new System.Drawing.Point(532, 51);
+            lblNameVal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblNameVal.Name = "lblNameVal";
+            lblNameVal.Size = new System.Drawing.Size(19, 22);
+            lblNameVal.TabIndex = 15;
+            lblNameVal.Text = "*";
+            lblNameVal.Visible = false;
             // 
             // customerControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.panelGrid);
-            this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "customerControl";
-            this.Size = new System.Drawing.Size(640, 507);
-            this.panelGrid.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.WhiteSmoke;
+            Controls.Add(groupBox1);
+            Controls.Add(btnClear);
+            Controls.Add(btnSave);
+            Controls.Add(panelGrid);
+            Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            ForeColor = System.Drawing.Color.MidnightBlue;
+            Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            Size = new System.Drawing.Size(733, 507);
+            Load += customerControl_Load;
+            panelGrid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvCustomers).EndInit();
+            ((System.ComponentModel.ISupportInitialize)schadInvocesEntitiesBindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)customerTypeBindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)schadInvocesEntitiesBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)customerTypeBindingSource).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelGrid;
         private System.Windows.Forms.DataGridView dgvCustomers;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCustomerName;
+        private System.Windows.Forms.TextBox txtCustomerAddress;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ComboBox cmbCustomerType;
+        private System.Windows.Forms.CheckBox chbCustomerActive;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblAddressVal;
+        private System.Windows.Forms.Label lblNameVal;
+        private System.Windows.Forms.BindingSource customerTypeBindingSource;
+        private System.Windows.Forms.BindingSource customerTypeBindingSource1;
+        private System.Windows.Forms.BindingSource schadInvocesEntitiesBindingSource;
+        private System.Windows.Forms.BindingSource schadInvocesEntitiesBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerType_Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }
